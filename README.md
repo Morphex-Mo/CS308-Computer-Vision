@@ -2,6 +2,8 @@
 
 本仓库为南方科技大学（SUSTech）CS308 计算机视觉课程相关学习资料与实验记录。
 
+最后维护日期：2026-04-01
+
 ## 重要声明（学术诚信）
 
 - 本仓库内容**仅供参考与学习交流**。
@@ -11,40 +13,31 @@
 
 ## 仓库内容概览
 
-### 1. 实验（lab）
+### 1. 作业（Assignment）
 
-- `lab/lab1/`
-  - `lab1_open_and_save_img.ipynb`
-  - `lab1_open_and_save_img_CN.ipynb`
-  - 主题：图像读取与保存、基础图像处理工具链（NumPy / OpenCV / Matplotlib）。
-- `lab/lab2/`
-  - `lab2.ipynb`
-  - `lab2_CN.ipynb`
-  - 主题：图像形成、投影与变换。
-- `lab/lab3/`
-  - `Lab3.ipynb`
-  - `Lab3_CN.ipynb`
-  - 以及配套示例图片。
-  - 主题：图像处理基础实验。
-- `lab/lab4/`
-  - `lab4.ipynb`
-  - `lab4_CN.ipynb`
-  - `imgs/` 下含实验图片资源。
-  - 主题：频域滤波与离散傅里叶变换（DFT）相关实验。
-- `lab/lab5/`
-  - `Lab 5.ipynb`
-  - 以及配套图片资源。
-  - 主题：图像特征相关内容。
+- `Assignment/Assignment-1/`
+  - `code/`：作业 Notebook 与代码（如 `student_code.py`、`utils.py`、测试 Notebook）。
+  - `data/`：作业数据。
+  - `results/`：作业结果与额外实验输出。
+  - `zip_submission.py`：作业打包脚本。
 
-### 2. 课程讲义（Lectures）
+### 2. 实验（lab）
 
-- `Lectures/` 目录下包含课程 PDF 讲义（如图像形成、线性滤波、频域与金字塔、目标检测、语义分割、目标跟踪、视觉语言等主题）。
+- `lab/lab1/`：图像读取与保存、基础图像处理工具链。
+- `lab/lab2/`：图像形成、投影与变换。
+- `lab/lab3/`：图像处理基础实验。
+- `lab/lab4/`：频域滤波与离散傅里叶变换（DFT）相关实验。
+- `lab/lab5/`：图像特征相关内容。
 
-### 3. 前沿分享资料
+### 3. 课程讲义（Lectures）
+
+- `Lectures/`：课程 PDF 讲义与课堂资料。
+
+### 4. 前沿分享资料
 
 - `lab课分享前沿/`
-  - `link.txt`（当前记录了一个外部链接）
-  - `lab2/`（包含前沿论文 PDF）
+  - `link.txt`：外部资料链接记录。
+  - `lab2/`：前沿论文与分享材料。
 
 ## 使用建议
 
@@ -57,3 +50,11 @@
 本仓库采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，详见 `LICENSE` 文件。
 
 再次强调：许可协议不代表可直接用于课程作业提交，课程作业应独立完成。
+
+## 更新日志模板
+
+为便于后续维护，建议在提交信息中使用以下模板：
+
+- `docs(readme): update lab4 summary`
+- `docs(license): align with CC BY-NC-SA 4.0`
+- `docs(maintenance): refresh update checklist`
