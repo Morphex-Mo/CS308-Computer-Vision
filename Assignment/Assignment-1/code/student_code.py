@@ -12,12 +12,12 @@ def my_imfilter(image, filter):
 
   HINTS:
   - You may not use any libraries that do the work for you. Using numpy to work
-   with matrices is fine and encouraged. Using opencv or similar to do the
-   filtering for you is not allowed.
+    with matrices is fine and encouraged. Using opencv or similar to do the
+    filtering for you is not allowed.
   - I encourage you to try implementing this naively first, just be aware that
-   it may take an absurdly long time to run. You will need to get a function
-   that takes a reasonable amount of time to run so that the TAs can verify
-   your code works.
+    it may take an absurdly long time to run. You will need to get a function
+    that takes a reasonable amount of time to run so that the TAs can verify
+    your code works.
   - Remember these are RGB images, accounting for the final image dimension.
   """
 
@@ -26,9 +26,38 @@ def my_imfilter(image, filter):
 
   ############################
   ### TODO: YOUR CODE HERE ###
+  # Unify grayscale/color processing to a 3D array (H, W, C).
+  is_gray = (image.ndim == 2)
+  if is_gray:
+    image_work = image[:, :, np.newaxis]
+  else:
+    image_work = image
 
-  raise NotImplementedError('`my_imfilter` function in `student_code.py` ' +
-    'needs to be implemented')
+  image_work = image_work.astype(np.float64)
+  filt = filter.astype(np.float64)
+
+  height, width, channels = image_work.shape
+  k_h, k_w = filt.shape
+  pad_h = k_h // 2
+  pad_w = k_w // 2
+
+  padded = np.pad(
+    image_work,
+    ((pad_h, pad_h), (pad_w, pad_w), (0, 0)),
+    mode='reflect'
+  )
+
+  filtered_image = np.zeros_like(image_work, dtype=np.float64)
+
+  # Naive convolution over spatial dimensions and channels.
+  for i in range(height):
+    for j in range(width):
+      patch = padded[i:i + k_h, j:j + k_w, :]
+      for c in range(channels):
+        filtered_image[i, j, c] = np.sum(patch[:, :, c] * filt)
+
+  if is_gray:
+    filtered_image = filtered_image[:, :, 0]
 
   ### END OF STUDENT CODE ####
   ############################
@@ -65,9 +94,13 @@ def create_hybrid_image(image1, image2, filter):
 
   ############################
   ### TODO: YOUR CODE HERE ###
+  low_frequencies = my_imfilter(image1, filter)
 
-  raise NotImplementedError('`create_hybrid_image` function in ' + 
-    '`student_code.py` needs to be implemented')
+  image2_low = my_imfilter(image2, filter)
+  high_frequencies = image2 - image2_low
+
+  hybrid_image = low_frequencies + high_frequencies
+  hybrid_image = np.clip(hybrid_image, 0.0, 1.0)
 
   ### END OF STUDENT CODE ####
   ############################
