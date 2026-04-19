@@ -2,7 +2,7 @@
 
 本仓库为南方科技大学（SUSTech）CS308 计算机视觉课程相关学习资料与实验记录。
 
-最后维护日期：2026-04-01
+最后维护日期：2026-04-19
 
 ## 重要声明（学术诚信）
 
@@ -15,10 +15,17 @@
 
 ### 1. 作业（Assignment）
 
+
 - `Assignment/Assignment-1/`
   - `code/`：作业 Notebook 与代码（如 `student_code.py`、`utils.py`、测试 Notebook）。
   - `data/`：作业数据。
   - `results/`：作业结果与额外实验输出。
+  - `zip_submission.py`：作业打包脚本。
+
+- `Assignment/Assignment-2/`
+  - `proj2/`：第二次作业主代码与特征点标注、匹配等子模块。
+  - `extra_data/`：补充数据集。
+  - `results/`：作业结果与报告。
   - `zip_submission.py`：作业打包脚本。
 
 ### 2. 实验（lab）
@@ -29,6 +36,8 @@
 - `lab/lab4/`：频域滤波与离散傅里叶变换（DFT）相关实验。
 - `lab/lab5/`：图像特征相关内容。
 - `lab/lab6/`：课程后续综合实验与扩展内容。
+- `lab/lab7/`：支持向量机（SVM）等进阶实验。
+- `lab/lab8/`：综合实验与数据集应用。
 
 ### 3. 课程讲义（Lectures）
 
@@ -43,14 +52,14 @@
 ## 使用建议
 
 - 推荐使用 Python 虚拟环境运行 Jupyter Notebook。
-- 建议按 `lab1 -> lab6` 的顺序学习，逐步掌握课程知识。
+- 建议按 `lab1 -> lab8` 的顺序学习，逐步掌握课程知识。
 - 对 Notebook 的修改建议另存为个人版本，便于追踪学习过程。
 
 ## 许可证
 
 本仓库采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，详见 `LICENSE` 文件。
 
-再次强调：许可协议不代表可直接用于课程作业提交，课程作业应独立完成。
+**再次强调：许可协议不代表可直接用于课程作业提交，课程作业应独立完成。**
 
 ## 更新日志模板
 
