@@ -62,9 +62,14 @@
 
 
 下图展示了部分匹配结果：
-![vis_circles](proj2/results/vis_circles.jpg)
-![vis_lines](proj2/results/vis_lines.jpg)
-![Notre Dame 匹配示例](proj2/results/eval.jpg)
+![Notre Dame_vis_circles](<proj2/results/Notre Dame_vis_circles.jpg>)
+![Notre Dame_vis_lines](<proj2/results/Notre Dame_vis_lines.jpg>)
+![Notre Dame 匹配示例](<proj2/results/Notre Dame_vis_lines.jpg>)
+因为另外两组图对没有ground truth,故只展示相关图片。
+![Episcopal Gaudi_vis_circles](<proj2/results/Episcopal Gaudi_vis_circles.jpg>)
+![Episcopal Gaudi_vis_lines](<proj2/results/Episcopal Gaudi_vis_lines.jpg>)
+![Mount Rushmore_vis_circles](<proj2/results/Mount Rushmore_vis_circles.jpg>)
+![Mount Rushmore_vis_lines](<proj2/results/Mount Rushmore_vis_lines.jpg>)
 
 ## 4. Discussion
 
