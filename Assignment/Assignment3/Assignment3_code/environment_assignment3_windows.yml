@@ -1,0 +1,17 @@
+name: assignment3_win
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - opencv
+  - pillow
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - pyyaml
