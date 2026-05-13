@@ -1,0 +1,35 @@
+name: assignment3
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pandas
+  - pillow
+  - cython
+  - opencv
+  - jupyter
+  - notebook
+  - ipykernel
+  - seaborn
+  - pdfminer.six
+  - pip
+  - pip:
+    # cyvlfeat often requires building C extensions and system libraries
+    # (caused the previous pip wheel build failure). Install it manually
+    # after environment creation, or use conda-forge if available:
+    #   conda install -c conda-forge cyvlfeat
+    - scikit-image
+    - tqdm
+    - joblib
+    - h5py
+    - imageio
+    - typing-extensions
+# Notes:
+# - 使用 Python 3.8，并首选 conda-forge 通道以获得更广的科学包兼容性。
+# - 删除了重复依赖并把 opencv 通过 conda 安装（避免同时通过 pip 安装 open-cv 包导致冲突）。
+# - 若作业 PDF 指定禁止使用的函数或库，请告知，我会相应调整环境。
