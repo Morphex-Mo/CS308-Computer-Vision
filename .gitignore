@@ -2,4 +2,5 @@
 *.jpg
 *.jpeg
 *.txt
-lab/lab11/vision
+lab/lab11/vision_material/
+.gitignore
