@@ -4,3 +4,4 @@
 *.txt
 lab/lab11/vision_material/
 .gitignore
+*.pkl
