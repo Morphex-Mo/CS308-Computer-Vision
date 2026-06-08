@@ -5,3 +5,5 @@
 lab/lab11/vision_material/
 .gitignore
 *.pkl
+lab/lab15/blip-image-captioning-base
+lab/lab15/models
